@@ -32,7 +32,7 @@ Allow the users to edit previously created notes.
 
 Live Version
 ------------
-[Markdown App] (https://motionless-crowd.surge.sh)
+https://motionless-crowd.surge.sh
 
 --------------------------------------------------------------------------------
 Created by Devon Moubry.
