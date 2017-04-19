@@ -1,8 +1,42 @@
 html {
+    height: 100vh;
+
     body {
         font-family: 'Catamaran', sans-serif;
         margin: auto;
         padding: auto;
         background: #fafafa;
+        height: 100vh;
+        main {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .markdown-container {
+            width: 50%;
+            height: 100vh;
+        }
+
+        .preview-container {
+            width: 50%;
+            height: 100vh;
+        }
+
+        .submit-button-container {
+            align-content: flex-end;
+            justify-content: center;
+        }
+
+        .textarea {
+          height: 80vh;
+          width: 60vh;
+        }
     }
+
+
 }
