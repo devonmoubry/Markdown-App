@@ -15,6 +15,8 @@ class AppRoot extends React.Component {
         this.updatePreview = this.updatePreview.bind(this);
         this.submitMarkdownNotes = this.submitMarkdownNotes.bind(this);
         this.createMarkup = this.createMarkup.bind(this);
+        this.dismissConfirmationMessage = this.dismissConfirmationMessage.bind(this);
+        this.confirmationMessage = this.confirmationMessage.bind(this);
     }
 
     updatePreview() {
@@ -42,6 +44,20 @@ class AppRoot extends React.Component {
         }
     }
 
+    dismissConfirmationMessage() {
+        this.props.dispatch({
+            type: "DISMISS_CONFIRMATION"
+        });
+    }
+
+    confirmationMessage() {
+      if (this.props.showConfirmationMessage == true) {
+        return <div className = "confirmation-message">You have submitted your markdown notes to the server <button onClick={this.dismissConfirmationMessage} className = "dismiss-button">Dismiss</button></div>
+      } else {
+        return '';
+      }
+    }
+
     render() {
         return (
             <main>
@@ -51,6 +67,7 @@ class AppRoot extends React.Component {
                     <div className = "submit-button-container">
                         <button className = "submit-button" type = "submit" onClick = { this.submitMarkdownNotes }> Submit </button>
                     </div>
+                    { this.confirmationMessage() }
                 </section>
                 <section className = "preview-container">
                     <h1 className = "preview-title"> Preview </h1>
