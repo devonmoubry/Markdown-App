@@ -43,19 +43,19 @@ class AppRoot extends React.Component {
     }
 
     render() {
-        return ( <main >
-            <section className = "markdown-container" >
-            <h1 className = "markdown-title" > Markdown App < /h1>
-            <textarea value={this.props.markdownNotes} onChange = { this.updatePreview } className = "textarea" ref = "markdown" / >
-            <div className = "submit-button-container" >
-            <button className = "submit-button" type = "submit" onClick = { this.submitMarkdownNotes } > Submit < /button>
-            </div>
-            </section>
-            <section className = "preview-container" >
-            <h1 className = "preview-title" > Preview < /h1>
-            <div className = "textarea"
-            dangerouslySetInnerHTML = {this.createMarkup()}/>
-            </section>
+        return (
+            <main>
+                <section className = "markdown-container">
+                    <h1 className = "markdown-title" > Markdown App </h1>
+                    <textarea value = {this.props.markdownNotes} onChange = { this.updatePreview } className = "textarea" ref = "markdown" />
+                    <div className = "submit-button-container">
+                        <button className = "submit-button" type = "submit" onClick = { this.submitMarkdownNotes }> Submit </button>
+                    </div>
+                </section>
+                <section className = "preview-container">
+                    <h1 className = "preview-title"> Preview </h1>
+                    <div className = "textarea" dangerouslySetInnerHTML = {this.createMarkup()}/>
+                </section>
             </main>
         );
     }
