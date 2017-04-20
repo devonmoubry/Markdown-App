@@ -18,7 +18,9 @@ class AppRoot extends React.Component {
   }
 
   submitMarkdownNotes()  {
-    //this.props.dispatch({ type: "SUBMIT_NOTES" });
+    const markdownInput = this.refs.markdown.value;
+    console.log(markdownInput);
+    this.props.dispatch({ type: "SUBMIT_NOTES", markdownNotes: markdownInput });
     console.log('I submitted the Markdown Notes to backendless');
   }
 
