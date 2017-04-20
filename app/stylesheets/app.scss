@@ -37,6 +37,8 @@ html {
         .textarea {
             height: 80vh;
             width: 60vh;
+            word-wrap: break-word;
+            overflow: hidden;
         }
     }
 }

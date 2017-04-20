@@ -52,7 +52,8 @@ class AppRoot extends React.Component {
 
     confirmationMessage() {
       if (this.props.showConfirmationMessage == true) {
-        return <div className = "confirmation-message">You have submitted your markdown notes to the server <button onClick={this.dismissConfirmationMessage} className = "dismiss-button">Dismiss</button></div>
+        return <div className = "confirmation-message">You have submitted your markdown notes to the server
+        <button onClick={this.dismissConfirmationMessage} className = "dismiss-button">Dismiss</button></div>
       } else {
         return '';
       }
