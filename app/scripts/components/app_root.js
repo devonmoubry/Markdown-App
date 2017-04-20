@@ -10,6 +10,7 @@ class AppRoot extends React.Component {
 
     this.updatePreview = this.updatePreview.bind(this);
     this.submitMarkdownNotes = this.submitMarkdownNotes.bind(this);
+    this.createMarkup = this.createMarkup.bind(this);
   }
 
   updatePreview() {
@@ -25,6 +26,10 @@ class AppRoot extends React.Component {
     console.log('I submitted the Markdown Notes to backendless');
   }
 
+  createMarkup() {
+    return {__html: marked(this.props.markdownPreview)}
+  }
+
   render () {
     return (
       <main>
@@ -37,7 +42,7 @@ class AppRoot extends React.Component {
         </section>
         <section className="preview-container">
           <h1 className="preview-title">Preview</h1>
-          <textarea className="textarea" value={marked(this.props.markdownPreview)}/>
+          <div className="textarea" dangerouslySetInnerHTML={this.createMarkup()} />
         </section>
       </main>
     );
