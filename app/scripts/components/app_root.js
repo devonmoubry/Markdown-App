@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Route } from 'react-router-dom'
 import container from '../containers/all.js'
+import marked from 'marked'
 
 class AppRoot extends React.Component {
   constructor (props) {
@@ -36,7 +37,7 @@ class AppRoot extends React.Component {
         </section>
         <section className="preview-container">
           <h1 className="preview-title">Preview</h1>
-          <textarea className="textarea" value={this.props.markdownPreview}/>
+          <textarea className="textarea" value={marked(this.props.markdownPreview)}/>
         </section>
       </main>
     );
