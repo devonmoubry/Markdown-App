@@ -7,6 +7,7 @@ html {
         padding: auto;
         background: #fafafa;
         height: 100vh;
+
         main {
             height: 100vh;
             display: flex;
@@ -34,10 +35,8 @@ html {
         }
 
         .textarea {
-          height: 80vh;
-          width: 60vh;
+            height: 80vh;
+            width: 60vh;
         }
     }
-
-
 }
